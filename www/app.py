@@ -35,4 +35,4 @@ if app.env == 'dev':
     app.run(use_reloader=False, host='127.0.0.1')
 else:
     from waitress import serve
-    serve(TransLogger(app, setup_console_handler=False), host="0.0.0.0", port=80)
+    serve(TransLogger(app, setup_console_handler=False), host="0.0.0.0", port=8080)
