@@ -13,7 +13,7 @@ def _processing():
             reply[v] = result
 
     reply.update(method=request.method,
-                 ip=request.remote_addr,
+                 ip=request.headers.get('X-Forwarded-For'),
                  host=request.host,
                  path=request.path)
 
